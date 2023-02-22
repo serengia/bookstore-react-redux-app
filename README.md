@@ -48,8 +48,6 @@ After you're finished please remove all the comments and instructions!
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-![math-magicians](https://user-images.githubusercontent.com/69452516/220363761-0030386f-f377-4cb6-9a5d-e060e1c8896c.png)
-
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Bookstore -- react-redux project <a name="about-project"></a>
