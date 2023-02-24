@@ -29,7 +29,10 @@
     "react/jsx-one-expression-per-line": "off",
     "linebreak-style": "off",
     "react/prop-types": "off",
-    "no-unneeded-ternary": "off"
+    "no-unneeded-ternary": "off",
+    "no-confusing-arrow": "off",
+    "implicit-arrow-linebreak": "off",
+    "react/jsx-curly-newline": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }
