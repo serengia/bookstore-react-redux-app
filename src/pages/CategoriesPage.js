@@ -4,7 +4,7 @@ function CategoriesPage() {
   return (
     <div>
       <div className="categories-wrapper row">
-        <h1>Categories</h1>
+        <button type="button">Check status</button>
       </div>
     </div>
   );

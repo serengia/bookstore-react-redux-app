@@ -11,7 +11,7 @@ import CategoriesPage from "./pages/CategoriesPage";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route path="books" element={<BooksPage />} />
+      <Route index element={<BooksPage />} />
       <Route path="categories" element={<CategoriesPage />} />
     </Route>
   )

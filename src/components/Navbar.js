@@ -8,7 +8,7 @@ function Navbar() {
         <li className="nav-link">
           <NavLink
             className={(linkData) => (linkData.isActive ? "active-link" : "")}
-            to="/books"
+            to="/"
           >
             Books
           </NavLink>
