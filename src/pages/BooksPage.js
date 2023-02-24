@@ -25,7 +25,7 @@ function BooksPage() {
   ];
   return (
     <div>
-      <div className="books-list-container">
+      <div className="books-list-container row">
         <ul className="books-list">
           {books.map((bk) => (
             <Book key={bk.id} title={bk.title} author={bk.author} id={bk.id} />
