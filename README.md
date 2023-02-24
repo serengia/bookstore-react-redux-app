@@ -88,9 +88,8 @@ After you're finished please remove all the comments and instructions!
 
 > The application has the following key features.
 
-- **A fully functional calculator that utilizes react states**
-- **Routing implementation**
-- **Random quotes implementation**
+- **Add book functionality**
+- **Remove book functionality**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +99,7 @@ After you're finished please remove all the comments and instructions!
 
 > Coming soon.
 
-- [Live Demo Link](https://github.com/serengis/)
+- [Live Demo Link](https://github.com/serengia/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
