@@ -7,7 +7,8 @@ export const postBook = createAsyncThunk(
   "books/postBook",
   async (bookData, thunkAPI) => {
     try {
-      const res = await axios.post(API_URL, bookData);
+      const res = await axios.post(`${API_URL}/books`, bookData);
+
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
@@ -18,10 +19,25 @@ export const postBook = createAsyncThunk(
 );
 
 export const getBooks = createAsyncThunk(
-  "books/postBook",
+  "books/getBooks",
   async (_, thunkAPI) => {
     try {
-      const res = await axios(API_URL);
+      const res = await axios(`${API_URL}/books`);
+      return res.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error?.data?.message || "Something went wrong!"
+      );
+    }
+  }
+);
+
+export const deleteBook = createAsyncThunk(
+  "books/deleteBook",
+  async (id, thunkAPI) => {
+    try {
+      const res = await axios.delete(`${API_URL}/books/${id}`);
+
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
@@ -33,26 +49,7 @@ export const getBooks = createAsyncThunk(
 
 const initialState = {
   isLoading: false,
-  books: [
-    {
-      item_id: "item1",
-      title: "The Great Gatsby",
-      author: "John Smith",
-      category: "Fiction",
-    },
-    {
-      item_id: "item2",
-      title: "Anna Karenina",
-      author: "Leo Tolstoy",
-      category: "Fiction",
-    },
-    {
-      item_id: "item3",
-      title: "The Selfish Gene",
-      author: "Richard Dawkins",
-      category: "Nonfiction",
-    },
-  ],
+  books: [],
 };
 
 const booksSlice = createSlice({
@@ -78,12 +75,10 @@ const booksSlice = createSlice({
       .addCase(postBook.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(postBook.fulfilled, (state, action) => {
+      .addCase(postBook.fulfilled, (state) => {
         state.isLoading = false;
-        state.books = state.books.push(action.payload);
       })
-      .addCase(postBook.rejected, (state, action) => {
-        console.log(action);
+      .addCase(postBook.rejected, (state) => {
         state.isLoading = false;
       });
 
@@ -94,12 +89,26 @@ const booksSlice = createSlice({
       })
       .addCase(getBooks.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.books = action.payload;
+        const resObject = action.payload;
+
+        const newBooksArr = [];
+        // eslint-disable-next-line no-restricted-syntax, guard-for-in
+        for (const id in resObject) {
+          const bookObj = resObject[id][0];
+          bookObj.item_id = id;
+          newBooksArr.push(bookObj);
+        }
+
+        state.books = newBooksArr;
       })
-      .addCase(getBooks.rejected, (state, action) => {
-        console.log(action);
+      .addCase(getBooks.rejected, (state) => {
         state.isLoading = false;
       });
+
+    // delete books
+    builder.addCase(deleteBook.fulfilled, (state, action) => {
+      console.log("SUCCESS>", action.payload);
+    });
   },
 });
 

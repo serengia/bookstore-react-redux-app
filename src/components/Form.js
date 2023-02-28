@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-import { booksActions } from "../redux/books/booksSlice";
+import { booksActions, postBook } from "../redux/books/booksSlice";
 
 function Form() {
   const [title, setTitle] = useState("");
@@ -26,10 +26,12 @@ function Form() {
       item_id: uuidv4(),
       title,
       author,
+      category: "Fiction",
     };
 
     // Adding book to state
     dispatch(booksActions.addBook(bookData));
+    dispatch(postBook(bookData));
 
     // Empty form inputs
     setTitle("");
