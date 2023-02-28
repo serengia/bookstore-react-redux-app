@@ -104,11 +104,6 @@ const booksSlice = createSlice({
       .addCase(getBooks.rejected, (state) => {
         state.isLoading = false;
       });
-
-    // delete books
-    builder.addCase(deleteBook.fulfilled, (state, action) => {
-      console.log("SUCCESS>", action.payload);
-    });
   },
 });
 
