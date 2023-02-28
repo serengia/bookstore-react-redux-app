@@ -34,7 +34,7 @@ function BooksPage() {
   return (
     <div>
       <div className="books-list-container row">
-        <ul className="books-list">{output}</ul>
+        <div className="books-list">{output}</div>
       </div>
       <Form />
     </div>
