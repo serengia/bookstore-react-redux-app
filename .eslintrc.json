@@ -32,7 +32,8 @@
     "no-unneeded-ternary": "off",
     "no-confusing-arrow": "off",
     "implicit-arrow-linebreak": "off",
-    "react/jsx-curly-newline": "off"
+    "react/jsx-curly-newline": "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }
