@@ -2,9 +2,13 @@
 
 // Variables
 $color-blue: #0290ff;
+$color-blue-dark: #4386bf;
+$color-blue-light: #63b5f4;
 
 $color-grey-1: #333;
 $color-grey-2: #888;
+
+$color-border: #e8e8e8;
 
 $color-grey-light: #fafafa;
 
@@ -25,6 +29,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: $color-grey-1;
   font-weight: 400;
+  background-color: $color-grey-light;
 }
 
 h1,
@@ -43,6 +48,9 @@ p {
 }
 
 .header {
+  background-color: #fff;
+  border-bottom: 1px solid $color-border;
+
   .logo {
     &:link,
     &:visited {
@@ -56,6 +64,18 @@ p {
     align-items: center;
     height: 6rem;
     gap: 4rem;
+  }
+
+  .user {
+    margin-left: auto;
+    .icon {
+      box-sizing: content-box;
+      padding: 1rem;
+      color: $color-blue;
+      font-size: 1.8rem;
+      border: solid 1px $color-border;
+      border-radius: 50%;
+    }
   }
 }
 
@@ -97,4 +117,118 @@ p {
   gap: 2rem;
   padding-top: 2rem;
   padding-bottom: 4rem;
+}
+
+.book-container {
+  background-color: #fff;
+  border: 1px solid $color-border;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  & > * {
+    flex: 1;
+  }
+
+  .book-details {
+    .title {
+      font-size: 1.8rem;
+    }
+
+    .by {
+      font-size: 1.5rem;
+    }
+
+    .buttons-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: $color-blue-dark;
+      }
+    }
+  }
+
+  .completion-status {
+    display: flex;
+    gap: 2rem;
+
+    .completion-data {
+      display: flex;
+      flex-direction: column;
+
+      .percentage {
+        font-size: 3rem;
+        font-weight: 300;
+      }
+
+      .status {
+        font-size: 1.3rem;
+        color: $color-grey-2;
+      }
+    }
+  }
+
+  .chapter {
+    .title {
+      color: $color-grey-2;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-text {
+      font-size: 1.6rem;
+    }
+
+    .progress-btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 3px;
+      background-color: $color-blue;
+      color: #dbdbdb;
+      cursor: pointer;
+      border: none;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.form-wrapper {
+  border-top: solid 2px $color-border;
+  padding: 4rem 0;
+
+  .form {
+    display: flex;
+    gap: 2rem;
+
+    .title-input,
+    .author-input {
+      padding: 0.8rem 1.2rem;
+      border: 1px solid $color-border;
+      border-radius: 3px;
+      background-color: #fff;
+    }
+    .title-input {
+      flex: 3;
+    }
+    .author-input {
+      flex: 2;
+    }
+    button {
+      flex: 1;
+      cursor: pointer;
+      border: none;
+      color: #fff;
+      font-size: 1.4rem;
+      background-color: $color-blue;
+      border-radius: 3px;
+    }
+  }
 }
