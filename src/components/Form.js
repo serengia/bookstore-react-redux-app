@@ -30,6 +30,10 @@ function Form() {
 
     // Adding book to state
     dispatch(booksActions.addBook(bookData));
+
+    // Empty form inputs
+    setTitle("");
+    setAuthor("");
   };
   return (
     <div className="form-wrapper row">
