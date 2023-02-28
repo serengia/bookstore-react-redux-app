@@ -58,7 +58,9 @@ function Form() {
           className="author-input"
           onChange={authorChangeHandler}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
       </form>
     </div>
   );
