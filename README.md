@@ -24,8 +24,10 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Bookstore -- react-redux project <a name="about-project"></a>
-
 > This is a Bookstore application built with react and redux.
+---
+![screencapture-bookstore-redux-onrender-2023-03-01-05_53_38](https://user-images.githubusercontent.com/69452516/222033440-3533d8a3-b124-4dc3-898a-aa37ece62eb8.png)
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
