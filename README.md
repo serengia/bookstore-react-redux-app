@@ -25,8 +25,14 @@
 
 # 📖 Bookstore -- react-redux project <a name="about-project"></a>
 > This is a Bookstore application built with react and redux.
+
+### Landing page
 ---
-![screencapture-bookstore-redux-onrender-2023-03-01-05_53_38](https://user-images.githubusercontent.com/69452516/222033440-3533d8a3-b124-4dc3-898a-aa37ece62eb8.png)
+![screencapture-bookstore-redux-onrender-2023-03-01-08_46_42](https://user-images.githubusercontent.com/69452516/222055852-b4c401fb-0f66-4a61-8cfd-f9fb24bd4b8a.png)
+### Categories page - with fitering functionality
+---
+![screencapture-bookstore-redux-onrender-categories-2023-03-01-08_51_06](https://user-images.githubusercontent.com/69452516/222056417-012b77dd-e58c-41dd-80a7-1eafb1a586f7.png)
+
 
 
 ## 🛠 Built With <a name="built-with"></a>
