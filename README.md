@@ -24,16 +24,20 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Bookstore -- react-redux project <a name="about-project"></a>
+
 > This is a Bookstore application built with react and redux.
 
 ### Landing page
+
 ---
+
 ![screencapture-bookstore-redux-onrender-2023-03-01-08_46_42](https://user-images.githubusercontent.com/69452516/222055852-b4c401fb-0f66-4a61-8cfd-f9fb24bd4b8a.png)
+
 ### Categories page - with fitering functionality
+
 ---
+
 ![screencapture-bookstore-redux-onrender-categories-2023-03-01-08_51_06](https://user-images.githubusercontent.com/69452516/222056417-012b77dd-e58c-41dd-80a7-1eafb1a586f7.png)
-
-
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -77,6 +81,9 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+
+**💡Important note:** When you view the live demo, you will realize that you can delete other people's books. That is okay because this project is meant to show you the functionality of the bookstore. Also, the remote API I am using to store data does not have the authentication and authorization functionality.
+**For my care about you**, if you want to have a more personalized experience and manage your own book list, I have recreated the project to allow that. In that case [use this link](https://github.com/serengia) --(Please check later if this special link is not active by the time you visit)
 
 - [Live Demo Link](https://bookstore-redux.onrender.com/)
 
