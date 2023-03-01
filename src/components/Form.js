@@ -6,6 +6,8 @@ import { booksActions, postBook } from "../redux/books/booksSlice";
 function Form() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
+  const [category, setCategory] = useState("");
+
   const dispatch = useDispatch();
 
   const titleChangeHandler = (e) => {
@@ -14,6 +16,10 @@ function Form() {
 
   const authorChangeHandler = (e) => {
     setAuthor(e.target.value);
+  };
+
+  const categoryChangeHandler = (e) => {
+    setCategory(e.target.value);
   };
 
   const submitHandler = (e) => {
@@ -26,7 +32,7 @@ function Form() {
       item_id: uuidv4(),
       title,
       author,
-      category: "Fiction",
+      category,
     };
 
     // Adding book to state
@@ -36,6 +42,7 @@ function Form() {
     // Empty form inputs
     setTitle("");
     setAuthor("");
+    setCategory("");
   };
   return (
     <div className="form-wrapper row">
@@ -47,6 +54,7 @@ function Form() {
           aria-label="Book title input"
           placeholder="Book Title"
           className="title-input"
+          required
           onChange={titleChangeHandler}
         />
         <input
@@ -56,8 +64,26 @@ function Form() {
           aria-label="Book author input"
           placeholder="Author"
           className="author-input"
+          required
           onChange={authorChangeHandler}
         />
+        <select
+          name="category"
+          id="category"
+          className="category-input"
+          onChange={categoryChangeHandler}
+          aria-label="Book category input"
+          required
+        >
+          <option value="">Select Category</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Technology">Technology</option>
+          <option value="Life-style">Life-style</option>
+          <option value="Economy">Economy</option>
+          <option value="Politics">Politics</option>
+          <option value="General">General</option>
+        </select>
+
         <button type="submit" className="submit-button">
           Submit
         </button>

@@ -22,6 +22,7 @@ function BooksPage() {
         key={bk.item_id}
         title={bk.title}
         author={bk.author}
+        category={bk.category}
         id={bk.item_id}
       />
     ));

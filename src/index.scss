@@ -122,6 +122,16 @@ p {
   }
 
   .book-details {
+    .category-chip {
+      font-size: 1.2rem;
+      padding: 3px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      background-color: #dbdbdb;
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
+
     .title {
       font-size: 1.8rem;
     }
@@ -200,7 +210,8 @@ p {
     gap: 2rem;
 
     .title-input,
-    .author-input {
+    .author-input,
+    .category-input {
       padding: 0.8rem 1.2rem;
       border: 1px solid $color-border;
       border-radius: 3px;
@@ -208,11 +219,15 @@ p {
     }
 
     .title-input {
-      flex: 3;
+      flex: 2;
     }
 
     .author-input {
       flex: 2;
+    }
+
+    .category-input {
+      flex: 1;
     }
 
     .submit-button {

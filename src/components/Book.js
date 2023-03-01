@@ -6,7 +6,7 @@ import ProgressBar from "./ProgressBar/ProgressBar";
 
 function Book(props) {
   const dispatch = useDispatch();
-  const { title, author, id } = props;
+  const { title, author, id, category } = props;
 
   const removeBookHandler = (e) => {
     // Dispatch remove book action
@@ -20,6 +20,7 @@ function Book(props) {
   return (
     <div className="book-container">
       <div className="book-details">
+        <span className="category-chip">{category}</span>
         <h2 className="title">{title}</h2>
         <span className="by">By {author}</span>
         <div className="buttons-wrapper">
