@@ -1,0 +1,41 @@
+.footer {
+  background-color: #010124;
+  &-container {
+    height: 10rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+
+    p {
+      color: #ccccd3;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .icon {
+        color: red;
+      }
+    }
+
+    .p-github {
+      border-left: 1px solid #ccccd3;
+      padding-left: 2rem;
+
+      a {
+        &:link,
+        &:visited {
+          text-decoration: none;
+          color: #4d4d66;
+          border-bottom: 1px solid currentColor;
+        }
+        &:hover,
+        &:active {
+          color: #67677c;
+          border-bottom: 1px solid currentColor;
+        }
+      }
+    }
+  }
+}
