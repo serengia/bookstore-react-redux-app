@@ -83,7 +83,8 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 **💡Important note:** When you view the live demo, you will realize that you can delete other people's books. That is okay because this project is meant to show you the functionality of the bookstore. Also, the remote API I am using to store data does not have the authentication and authorization functionality.
-**For my care about you**, if you want to have a more personalized experience and manage your own book list, I have recreated the project to allow that. In that case [use this link](https://github.com/serengia) --(Please check later if this special link is not active by the time you visit)
+
+After doing this project, I wantend to expand on it and as a result **buklist.com** was born. For the forseable future, I intend to make **buklist.com** project an open source project. You can find ou more about project [buklist.com here](https://github.com/serengia/bookstore-nextjs-redux-mongo-db)
 
 - [Live Demo Link](https://bookstore-redux.onrender.com/)
 
